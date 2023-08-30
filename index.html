@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wynn Solutions Myanmar</title>
+
+
+    <!-- Favicons -->
+    <link href="iPortfolio/assets/img/favicon.ico" rel="icon">
+    <link href="iPortfolio/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+        integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body {
+            background-color: #ece5dd;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .container {
+            max-width: 960px;
+        }
+
+        /*
+ * Custom translucent site header
+ */
+
+        .site-header {
+            background-color: rgba(31, 32, 33, 0.85);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        .site-footer {
+            background-color: rgba(251, 229, 201, .8);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        .site-header a {
+            color: #dcd158;
+            transition: color .15s ease-in-out;
+        }
+
+        .site-header a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+        .product-device {
+            position: absolute;
+            right: 10%;
+            bottom: -30%;
+            width: 300px;
+            height: 540px;
+            background-color: rgb(193, 186, 186);
+            border-radius: 21px;
+            transform: rotate(30deg);
+        }
+
+        .product-device::before {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            bottom: 10%;
+            left: 10px;
+            content: "";
+            background-color: rgba(251, 229, 201, .8);
+            border-radius: 5px;
+        }
+
+        .product-device-2 {
+            top: -25%;
+            right: auto;
+            bottom: 0;
+            left: 5%;
+            /* background-color: #e5e5e5; */
+            background-color:
+
+        }
+
+        .product-device-2::before {
+            position: absolute;
+            top: 10%;
+            right: 10px;
+            bottom: 10%;
+            left: 10px;
+            content: "";
+            /* background-color: rgba(255, 246, 0, 0.4); */
+            background-color: rgba(251, 229, 201, .3);
+            border-radius: 5px;
+        }
+
+
+
+        /*
+ * Extra utilities
+ */
+
+        .flex-equal>* {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .flex-md-equal>* {
+                flex: 1;
+            }
+        }
+    </style>
+
+
+</head>
+
+<header class="site-header sticky-top py-1">
+    <nav class="container d-flex flex-column flex-md-row justify-content-between">
+        <a class="py-2 " href="#" aria-label="Product"
+            style="padding-top: 10px !important; padding-left: 10px !important; padding-right: 10px !important; padding-bottom: 10px !important; border-radius: 50%; background-color: #000;">
+            <img src="iPortfolio/assets/img/apple-touch-icon.png" alt="Logo" width="25" height="25">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
+                viewBox="0 0 24 24">
+                <title>Product</title>
+                <circle cx="12" cy="12" r="10" />
+                <path
+                    d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+            </svg> -->
+        </a>
+        <a class="py-2 d-none d-md-inline-block" href="resume.html">
+            Resume of Thomaz
+        </a>
+        <!-- <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
+        <a class="py-2 d-none d-md-inline-block" href="#">Cart</a> -->
+    </nav>
+</header>
+
+<main>
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 fw-normal">Our Services</h1>
+            <p class="lead fw-normal">We will provide the excellent services and passionate developer, developing with
+                full of innovations. We are building applications that illuminate people lives. Specialties: Android,
+                Web, Java, PHP, CMS.</p>
+            <a class="btn btn-outline-secondary" href="#">Create the neXt...</a>
+        </div>
+        <div class="product-device shadow-sm d-none d-md-block"></div>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">E-commerce Websites</h2>
+                <p class="lead">Living in the tech era, any local business should move to the online. Don't worries, we
+                    provide various kinds of product selling marketplace platforms.</p>
+            </div>
+            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            </div>
+        </div>
+        <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Company Websites & e-mail Services</h2>
+                <p class="lead">Let we help to get digital portfolio for your company, your clients' trust and bulit
+                    strong relationships.
+                </p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            </div>
+        </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 p-3">
+                <h2 class="display-5">Mobile Applications</h2>
+                <p class="lead">For your business, mobile applications can save your resources and can get the profit of
+                    data. Data show your business's statics. Work with us!</p>
+            </div>
+            <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            </div>
+        </div>
+        <div class="text-bg-secondary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+            <div class="my-3 py-3">
+                <h2 class="display-5">Website Renovations</h2>
+                <p class="lead">Not only your office need renovations, your should try to renovate your digital office
+                    image. Let's we help to you, with our design specialist talents and latest designs</p>
+            </div>
+            <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="container-fluid py-5 site-footer">
+    <div class="row">
+        <div class="col-md-4 mx-auto  text-center">
+            <h1 class="fw-normal display-4">Contact Us</h1>
+            <div class="d-flex">
+
+                <h3 class="fw-normal">
+                    <div class="social-network m-3">
+                        <ul class="list-unstyled text-small">
+                            <li><a class="link-secondary text-decoration-none"
+                                    href="https://www.upwork.com/freelancers/~01b657b9e93ff6608f" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                        version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 122.88 122.88"
+                                        style="enable-background:new 0 0 122.88 122.88;width:30px;height=30px;"
+                                        xml:space="preserve">
+                                        <style type="text/css">
+                                            <![CDATA[
+                                            .st0 {
+                                                fill: #FFFFFF;
+                                            }
+
+                                            .st1 {
+                                                fill: #6FDA44;
+                                            }
+                                            ]]>
+                                        </style>
+                                        <g>
+                                            <path class="st1"
+                                                d="M18.43,0h86.02c10.18,0,18.43,8.25,18.43,18.43v86.02c0,10.18-8.25,18.43-18.43,18.43H18.43 C8.25,122.88,0,114.63,0,104.45l0-86.02C0,8.25,8.25,0,18.43,0L18.43,0z" />
+                                            <path class="st0"
+                                                d="M85.73,71.26c-4.08,0-7.92-1.73-11.38-4.54l0.84-3.98l0.02-0.14c0.77-4.22,3.14-11.33,10.51-11.33 c5.52,0,10.01,4.49,10.01,10.01C95.74,66.79,91.25,71.26,85.73,71.26L85.73,71.26L85.73,71.26z M85.73,41.14 c-9.41,0-16.68,6.1-19.66,16.15c-4.51-6.79-7.94-14.93-9.94-21.79H46.01v26.33c0,5.21-4.22,9.43-9.43,9.43 c-5.21,0-9.43-4.22-9.43-9.43V35.47h-10.1V61.8c0,10.78,8.76,19.63,19.54,19.63s19.54-8.86,19.54-19.63v-4.42 c1.97,4.1,4.37,8.26,7.3,11.9l-6.19,29.14h10.34l4.49-21.12c3.94,2.52,8.45,4.1,13.63,4.1c11.09,0,20.11-9.07,20.11-20.18 C105.82,50.16,96.82,41.14,85.73,41.14L85.73,41.14z" />
+                                        </g>
+                                    </svg>
+                                    UpWork
+                                </a>
+                            </li>
+                            <li><a class="link-secondary text-decoration-none"
+                                    href="https://www.facebook.com/heinthurawynnn/" target="_blank"><i
+                                        class="fa-solid  fab fa-facebook text-primary"></i> Facebook</a></li>
+                            <li><a class="link-secondary text-decoration-none"
+                                href="resume.html" target="_blank">
+                                <img src="iPortfolio/assets/img/apple-touch-icon.png" alt="Logo" width="30" height="30" style="margin:4px;">
+
+
+                                Thomaz </a></li>
+                        </ul>
+
+                    </div>
+                </h3>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                    id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                    xml:space="preserve" width="128" height="128" class="mt-3">
+                    <g>
+                        <g>
+                            <g>
+                                <path
+                                    d="M349.867,162.133h68.267c4.713,0,8.533-3.821,8.533-8.533c0-4.713-3.82-8.533-8.533-8.533h-68.267     c-4.713,0-8.533,3.821-8.533,8.533C341.333,158.313,345.154,162.133,349.867,162.133z" />
+                                <path
+                                    d="M418.133,213.333h-68.267c-4.713,0-8.533,3.82-8.533,8.533s3.821,8.533,8.533,8.533h68.267     c4.713,0,8.533-3.82,8.533-8.533S422.846,213.333,418.133,213.333z" />
+                                <path
+                                    d="M443.733,179.2H324.267c-4.713,0-8.533,3.82-8.533,8.533s3.82,8.533,8.533,8.533h119.467c4.713,0,8.533-3.82,8.533-8.533     S448.446,179.2,443.733,179.2z" />
+                                <path
+                                    d="M93.867,264.533h68.267c4.713,0,8.533-3.82,8.533-8.533s-3.821-8.533-8.533-8.533H93.867     c-4.713,0-8.533,3.82-8.533,8.533S89.154,264.533,93.867,264.533z" />
+                                <path
+                                    d="M162.133,332.8c4.713,0,8.533-3.82,8.533-8.533s-3.821-8.533-8.533-8.533H93.867c-4.713,0-8.533,3.82-8.533,8.533     s3.82,8.533,8.533,8.533H162.133z" />
+                                <path
+                                    d="M196.267,290.133c0-4.713-3.82-8.533-8.533-8.533H68.267c-4.713,0-8.533,3.82-8.533,8.533s3.82,8.533,8.533,8.533     h119.467C192.446,298.667,196.267,294.846,196.267,290.133z" />
+                                <path
+                                    d="M247.467,42.667h42.667c4.713,0,8.533-3.82,8.533-8.533s-3.821-8.533-8.533-8.533h-42.667     c-4.713,0-8.533,3.821-8.533,8.533S242.754,42.667,247.467,42.667z" />
+                                <path
+                                    d="M213.333,42.667h8.533c4.713,0,8.533-3.82,8.533-8.533s-3.821-8.533-8.533-8.533h-8.533     c-4.713,0-8.533,3.821-8.533,8.533S208.62,42.667,213.333,42.667z" />
+                                <path
+                                    d="M494.933,191.147c0-48.884-40.879-88.955-93.867-96.133V59.733V33.809C401.067,15.136,385.931,0,367.258,0H144.742     c-18.673,0-33.809,15.136-33.809,33.809v25.924V76.8c-4.713,0-8.533,3.82-8.533,8.533v8.533c0,4.713,3.821,8.533,8.533,8.533     v8.533c-4.713,0-8.533,3.82-8.533,8.533V128c0,4.713,3.821,8.533,8.533,8.533v8.533c-4.713,0-8.533,3.821-8.533,8.533v8.533     c0,4.713,3.821,8.533,8.533,8.533v26.747c-52.988,7.178-93.867,47.249-93.867,96.133c0,49.104,41.105,90.359,93.867,97.791V435.2     v42.991c0,18.673,15.136,33.809,33.809,33.809h222.515c18.673,0,33.809-15.136,33.809-33.809V435.2V288.938     C453.829,281.505,494.933,240.251,494.933,191.147z M144.742,17.067h222.515c9.248,0,16.742,7.495,16.742,16.742V51.2H128V33.809     C128,24.561,135.495,17.067,144.742,17.067z M34.133,293.547c0-41.463,37.087-75.994,84.941-79.85     c0.333,0.015,0.669,0.015,1.009-0.01c2.661-0.193,4.653-0.301,6.5-0.338c0.472-0.006,0.942-0.015,1.416-0.015     c52.089,0,93.867,36.206,93.867,80.213c0,15.323-5.155,29.284-15.319,42.612c-1.288,1.689-1.9,3.798-1.716,5.914     c1.303,14.991,3.943,28.429,8.412,39.205c-6.96-1.395-13.823-3.153-20.281-5.305c-6.845-2.281-12.915-4.91-17.995-7.875     c-2.289-1.336-5.069-1.533-7.523-0.533c-12.907,5.261-25.692,7.902-39.446,7.902c-0.465,0-0.928-0.01-1.392-0.016     c-1.837-0.038-3.82-0.15-6.499-0.353c-0.345-0.026-0.686-0.026-1.023-0.012C71.555,371.072,34.133,335.354,34.133,293.547z      M128,478.191v-34.458h105.434c-7.09,6.254-11.567,15.401-11.567,25.6s4.477,19.346,11.567,25.6h-88.692     C135.495,494.933,128,487.439,128,478.191z M256,486.4c-9.427,0-17.067-7.64-17.067-17.067s7.64-17.067,17.067-17.067     c9.427,0,17.067,7.64,17.067,17.067S265.427,486.4,256,486.4z M367.258,494.933h-88.692c7.09-6.254,11.567-15.401,11.567-25.6     s-4.477-19.346-11.567-25.6H384v34.458C384,487.439,376.505,494.933,367.258,494.933z M384,426.667H128v-34.133     c14.648,0,28.409-2.583,42.047-7.666c5.282,2.754,11.152,5.174,17.52,7.296c9.237,3.079,19.054,5.39,28.86,7.058     c3.425,0.583,6.61,1.045,9.478,1.399c1.747,0.216,3.02,0.349,3.742,0.413c8.012,0.709,12.466-9.046,6.683-14.636     c-7.348-7.102-12.17-23.188-14.193-42.623c11.025-15.418,16.795-32.063,16.795-50.228c0-54.02-49.918-97.28-110.933-97.28v-128     h256v25.6c-61.015,0-110.933,43.26-110.933,97.28c0,18.165,5.77,34.81,16.795,50.228c-2.023,19.435-6.845,35.521-14.193,42.623     c-5.783,5.59-1.329,15.345,6.683,14.636c0.722-0.064,1.995-0.197,3.742-0.413c2.868-0.354,6.053-0.816,9.478-1.399     c9.806-1.668,19.623-3.979,28.86-7.058c6.368-2.122,12.239-4.542,17.52-7.296c13.638,5.083,27.399,7.666,42.047,7.666V426.667z      M392.914,272.686c-0.337-0.015-0.678-0.014-1.023,0.012c-2.679,0.202-4.661,0.315-6.499,0.353     c-0.464,0.006-0.927,0.016-1.392,0.016c-13.753,0-26.538-2.641-39.446-7.902c-2.454-1-5.234-0.804-7.523,0.533     c-5.08,2.965-11.15,5.594-17.995,7.875c-6.458,2.152-13.321,3.91-20.281,5.305c4.469-10.776,7.109-24.214,8.412-39.205     c0.184-2.116-0.428-4.225-1.716-5.914c-10.164-13.328-15.319-27.288-15.319-42.612c0-44.008,41.777-80.213,93.867-80.213     c0.473,0,0.944,0.009,1.416,0.015c1.847,0.037,3.839,0.145,6.5,0.338c0.341,0.025,0.677,0.025,1.009,0.01     c47.854,3.856,84.941,38.387,84.941,79.85C477.867,232.954,440.445,268.672,392.914,272.686z" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                </svg>
+                <h3 class="fw-normal">
+                    <div class="social-network m-3">
+                        <ul class="list-unstyled text-small">
+                            <li><a class="link-secondary text-decoration-none"
+                                    href="mailto:heinthurawynn.developer@gmail.com" target="_blank"><i
+                                        class="fa-solid fa-envelope-open-text text-primary"></i> E-mail</a></li>
+                            <li><a class="link-secondary text-decoration-none"
+                                    href="https://www.linkedin.com/in/hein-thura-wynn-developer" target="_blank"><i
+                                        class="fa-solid  fab fa-linkedin text-primary"></i> LinkedIn</a></li>
+                            <li><a class="link-secondary text-decoration-none"
+                                    href="https://join.skype.com/invite/ahXqe1LQKqS2" target="_blank"><i
+                                        class="fa-solid  fab fa-skype text-primary"></i> Skype</a></li>
+                        </ul>
+
+                    </div>
+                </h3>
+            </div>
+            <small class="d-block mt-3 text-muted">&copy; <span id="year"></span> Wynn Solutions Myanmar
+                <script>
+                    const d = new Date();
+                    let year = d.getFullYear();
+                    document.getElementById("year").innerHTML = year;
+                </script>
+            </small>
+        </div>
+    </div>
+    <div class="row d-none">
+        <div class="col-12 col-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+                viewBox="0 0 24 24">
+                <title>Product</title>
+                <circle cx="12" cy="12" r="10" />
+                <path
+                    d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+            </svg>
+            <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Cool stuff</a></li>
+                <li><a class="link-secondary" href="#">Random feature</a></li>
+                <li><a class="link-secondary" href="#">Team feature</a></li>
+                <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+                <li><a class="link-secondary" href="#">Another one</a></li>
+                <li><a class="link-secondary" href="#">Last time</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Resource name</a></li>
+                <li><a class="link-secondary" href="#">Resource</a></li>
+                <li><a class="link-secondary" href="#">Another resource</a></li>
+                <li><a class="link-secondary" href="#">Final resource</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Business</a></li>
+                <li><a class="link-secondary" href="#">Education</a></li>
+                <li><a class="link-secondary" href="#">Government</a></li>
+                <li><a class="link-secondary" href="#">Gaming</a></li>
+            </ul>
+        </div>
+        <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+                <li><a class="link-secondary" href="#">Team</a></li>
+                <li><a class="link-secondary" href="#">Locations</a></li>
+                <li><a class="link-secondary" href="#">Privacy</a></li>
+                <li><a class="link-secondary" href="#">Terms</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
