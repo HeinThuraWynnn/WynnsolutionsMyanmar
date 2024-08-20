@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>{{'Thomaz & MiRi Wedding'}}</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <link rel="shortcut icon" href="{{ asset('images/double_happy.png') }}">
+
+  <style>
+    @font-face {
+      font-family: Copperplate;
+      src: url(/fonts/CopperplateCondensedSSiBoldCondensed.ttf);
+    }
+
+    @font-face {
+      font-family: Amazone;
+      src: url(/fonts/unicode.amazonen.ttf);
+    }
+
+    @font-face {
+      font-family: BloomingElegant;
+      src: url(/fonts/BloomingElegant.otf);
+    }
+
+
+    /* general styling */
+    :root {
+      --smaller: .75;
+      --gold-color: #FFBC00;
+      --body-color: #666;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Copperplate', Arial, sans-serif;
+      color: var(--body-color);
+      background-color: rgba(0, 0, 0, .2);
+      background-repeat: repeat-y;
+      background-size: cover;
+      background-position: center center;
+      /* background-image: url('https://img.freepik.com/free-photo/gypsophila-gray-background-with-copy-space-center_24972-336.jpg?size=626&ext=jpg'); */
+
+      background-image: url(https://wallpaperbat.com/img/392379-wedding-wallpaper.jpg);
+
+      /* https://i5.walmartimages.com/asr/6cff0da1-56c4-49a8-8d61-e16f432b2190.bcebccaeab358966ad7ef016e06c2fa1.jpeg); */
+
+      /* https://media.istockphoto.com/photos/stylized-delicate-background-with-small-flowers-picture-id1136461807?b=1&k=20&m=1136461807&s=170667a&w=0&h=MdRFCkKUCEFbD62oCJtIUGQh6npObFx-Uye_-ggBldg=); */
+      /* https://images.unsplash.com/photo-1601379329542-31c59347e2b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80); */
+      /* https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm123-flower1-gloy-35-l_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=baa50b181a8aa81ac4b5d349d13f7d57); */
+    }
+
+    .main-content {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    h1 {
+      font-weight: normal;
+      font-style: normal;
+      color: var(--body-color);
+      letter-spacing: .125rem;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-weight: normal;
+      font-style: normal;
+      color: var(--gold-color);
+      letter-spacing: .125rem;
+      text-transform: uppercase;
+    }
+
+
+    h1.super-font {
+      font-size: 2.5em;
+    }
+
+    h3.super-font {
+      font-size: 2em;
+      text-shadow: .005em .005em var(--body-color);
+
+    }
+
+    .super-font {
+      font-family: 'Amazone', Arial, sans-serif;
+
+      text-transform: capitalize;
+      text-shadow: 1px 1px var(--body-color);
+    }
+
+    p {
+      font-size: 1.25em;
+      color: var(--body-color);
+      font-family: 'Copperplate', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    li {
+      display: inline-block;
+      font-size: 1em;
+      list-style-type: none;
+      padding: .75em;
+      text-transform: uppercase;
+      color: var(--body-color);
+    }
+
+    li span {
+      display: block;
+      font-size: 2rem;
+      color: var(--body-color);
+      background-color: var(--gold-color);
+      padding: 2px;
+      width: 2em;
+      height: 1.6em;
+      border-radius: 50%;
+    }
+
+    .emoji {
+      display: none;
+      padding: 1rem;
+    }
+
+    .emoji span {
+      font-size: 4rem;
+      padding: 0 .5rem;
+    }
+
+    #slideshow1 {
+      display: block !important;
+    }
+
+    #slideshow,
+    #slideshow1 {
+      margin: 25vh auto;
+      position: relative;
+      width: 15vw;
+      height: 350px;
+      padding: 5px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    #slideshow>div,
+    #slideshow1>div {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+    }
+
+    #slideshow img,
+    #slideshow1 img {
+      max-width: 15vw;
+      min-width: 15vw;
+
+    }
+
+    @media all and (max-width: 768px) {
+      h1 {
+        font-size: calc(1.5rem * var(--smaller));
+      }
+
+      h1.super-font {
+        font-size: 1.5em;
+      }
+
+      h3.super-font {
+        font-size: 1em;
+      }
+
+      li {
+        font-size: calc(1.125rem * var(--smaller));
+      }
+
+      li span {
+        font-size: calc(2.375rem * var(--smaller));
+      }
+
+      #slideshow,
+      #slideshow1 {
+        margin: 10px auto;
+        position: relative;
+        width: 90vw;
+        height: 60vh;
+        padding: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      }
+
+      #slideshow>div,
+      #slideshow1>div {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+      }
+
+      #slideshow img,
+      #slideshow1 img {
+        max-width: 90vw;
+        min-width: 90vw;
+
+      }
+
+    }
+
+    @media (max-width: 767px) {
+      #slideshow1 {
+        display: none !important;
+      }
+
+      .mt-10 {
+        margin-top: 1em !important;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 d-lg-block d-none">
+        <img src="images/main_page.png" class="img-fluid vh-100 " alt="Wedding Invitation Card">
+      </div>
+
+      <div class="col-lg-6 col-12">
+        <div class="row">
+          <div class="col-md-8 text-center main-content my-auto">
+            <h1 class="super-font mt-2 mt-10">MiRi & Thomaz</h1>
+            <p>We Are Getting Married</p>
+            @if(!empty($visitor_data))
+            <p class="mt-2">Dear </p>
+            <h3 class="super-font text-warning bg-dark card">{{$visitor_data->name }}</h3>
+            <p class="my-2">{{"We reserve '$visitor_data->seat' seat(s) for you"}}</p>
+            <strong class="text-danger my-5">{{ !empty($visitor_data->remark) ? $visitor_data->remark : "Please Confirm by the following button before June 10th."}}</strong>
+            <br>
+            @if(empty($visitor_data->remark))
+            <div class="btn-group">
+
+              <form action="{{ route('visitors.join',$visitor_data->id) }}" method="POST" id="join" class="col-4">
+                @csrf
+                @method('POST')
+                <button type="submit" class="btn btn-success" title="We will join @ Sunday Evening!"><small>Join </small></button>
+              </form>
+
+              <div class="col-4">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal" title="Adjust the seat(s).">
+                  <small>Edit </small>
+              </div>
+
+              <!-- Modal -->
+              <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-primary">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-white" id="editModalLabel">Adjust the seat</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="{{ route('visitors.update_seat',$visitor_data->id) }}" method="POST" id="edit" class="col-4">
+                        @csrf
+                        @method('POST')
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline mb-3">
+                      <label class="custom-control-label text-white" for="seat_no">Request Seat(s) </label>
+
+                      <input type="number" class="custom-control-input" value="{{$visitor_data->seat}}" min="1" max="{{$visitor_data->seat > 3 ? $visitor_data->seat : 3}}" name="seat" id="seat_no">
+
+                      <button type="submit" class="btn btn-info" title="We will join @ Sunday Evening!">Save</button>
+                    </div>
+                    </form>
+
+
+                  </div>
+                </div>
+              </div>
+
+              <form action="{{ route('visitors.cant',$visitor_data->id) }}" method="POST" id="cancel" class="col-4">
+                @csrf
+                @method('POST')
+                <button type="submit" class="btn btn-danger" title="Sorry,we can't join @ Sunday Evening!"><small>Can't</small></button>
+              </form>
+            </div>
+
+            <br>
+
+            @endif
+            @endif
+            <small> On Sunday, JUNE 12nd 2022 </small><br>
+            <small> From 3:30 PM To 5:30 PM </small><br>
+            <small>@ <a href="/w/m/m" target="_blank">Malibu Bar, Yangon, Myanmar</a></small>
+            <div class="d-flex-inline mx-auto">
+              @if(!empty($visitor_data))
+              <img style="border:.5px solid; border-radius: 2px; padding: 5px; margin:5px;" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('http://wynnsolutionsmyanmar.com/images/sx.png', 0.5, true)
+                                ->size(80)->errorCorrection('H')
+                                ->style('round')
+                                ->generate('https://tinyurl.com/yckhtp9k/'.$visitor_data->id)) !!} ">
+              @endif
+              <img style="border:.5px solid; border-radius: 2px; padding: 5px; margin:5px;" src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge('http://wynnsolutionsmyanmar.com/images/malibu.png', 0.5, true)
+                                ->size(80)->errorCorrection('H')
+                                ->style('round')
+                                ->generate('https://tinyurl.com/yckhtp9k/m/m')) !!} ">
+              <p class="small text-danger">According to the current situation, we wouldn't like to accept Parcel as gift. Thank you!</p>
+              <img class="img-fluid my-3" src="images/payment_QR.png" title="For the e-money gift for us, Thank you." />
+
+            </div>
+            <br>
+
+            <h4 id="headline">Countdown to our wedding party</h4>
+            <div id="countdown">
+              <ul>
+                <li><span id="days"></span>Days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+              </ul>
+            </div>
+            <div id="content" class="emoji">
+              <span>🎉🤵</span>
+              <span style="color:red">囍</span>
+              <span>👰🎉</span>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 vh-100">
+            <div id="slideshow">
+              <div>
+                <img src="images/wedding/1.jpg" class="img-fluid">
+              </div>
+              <div>
+                <img src="images/wedding/2.jpg" class="img-fluid">
+              </div>
+              <div>
+                <img src="images/wedding/3.jpg" class="img-fluid">
+              </div>
+              <div>
+                <img src="images/wedding/7.jpg" class="img-fluid">
+              </div>
+              <div>
+                <img src="images/wedding/4.jpg" class="img-fluid">
+              </div>
+              <div>
+                <img src="images/wedding/8.jpg" class="img-fluid">
+              </div>
+              <div>
+                <img src="images/wedding/5.jpg" class="img-fluid">
+              </div>
+              <div>
+                <img src="images/wedding/6.jpg" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-md-block d-lg-none">
+        <img src="images/main_page.png" class="img-fluid vh-100 " alt="Wedding Invitation Card">
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    'use strict';
+
+    window.onload = function() {
+      /// Slider start;
+
+      $("#slideshow > div:gt(0)").hide();
+
+      setInterval(function() {
+        $('#slideshow > div:first')
+          .fadeOut(3000)
+          .next()
+          .fadeIn(3000)
+          .end()
+          .appendTo('#slideshow');
+      }, 3000);
+
+      $("#slideshow1 > div:gt(0)").hide();
+
+      setInterval(function() {
+        $('#slideshow1 > div:first')
+          .fadeOut(3000)
+          .next()
+          .fadeIn(3000)
+          .end()
+          .appendTo('#slideshow1');
+      }, 3000);
+      /// Slider end;
+      /// Confetti start poof();
+
+      // Globals
+      var random = Math.random,
+        cos = Math.cos,
+        sin = Math.sin,
+        PI = Math.PI,
+        PI2 = PI * 2,
+        timer = undefined,
+        frame = undefined,
+        confetti = [];
+
+      var particles = 10,
+        spread = 40,
+        sizeMin = 3,
+        sizeMax = 12 - sizeMin,
+        eccentricity = 10,
+        deviation = 100,
+        dxThetaMin = -.1,
+        dxThetaMax = -dxThetaMin - dxThetaMin,
+        dyMin = .13,
+        dyMax = .18,
+        dThetaMin = .4,
+        dThetaMax = .7 - dThetaMin;
+
+      var colorThemes = [
+        function() {
+          return color(200 * random() | 0, 200 * random() | 0, 200 * random() | 0);
+        },
+        function() {
+          var black = 200 * random() | 0;
+          return color(200, black, black);
+        },
+        function() {
+          var black = 200 * random() | 0;
+          return color(black, 200, black);
+        },
+        function() {
+          var black = 200 * random() | 0;
+          return color(black, black, 200);
+        },
+        function() {
+          return color(200, 100, 200 * random() | 0);
+        },
+        function() {
+          return color(200 * random() | 0, 200, 200);
+        },
+        function() {
+          var black = 256 * random() | 0;
+          return color(black, black, black);
+        },
+        function() {
+          return colorThemes[random() < .5 ? 1 : 2]();
+        },
+        function() {
+          return colorThemes[random() < .5 ? 3 : 5]();
+        },
+        function() {
+          return colorThemes[random() < .5 ? 2 : 4]();
+        }
+      ];
+
+      function color(r, g, b) {
+        return 'rgb(' + r + ',' + g + ',' + b + ')';
+      }
+
+      // Cosine interpolation
+      function interpolation(a, b, t) {
+        return (1 - cos(PI * t)) / 2 * (b - a) + a;
+      }
+
+      // Create a 1D Maximal Poisson Disc over [0, 1]
+      var radius = 1 / eccentricity,
+        radius2 = radius + radius;
+
+      function createPoisson() {
+        // domain is the set of points which are still available to pick from
+        // D = union{ [d_i, d_i+1] | i is even }
+        var domain = [radius, 1 - radius],
+          measure = 1 - radius2,
+          spline = [0, 1];
+        while (measure) {
+          var dart = measure * random(),
+            i, l, interval, a, b, c, d;
+
+          // Find where dart lies
+          for (i = 0, l = domain.length, measure = 0; i < l; i += 2) {
+            a = domain[i], b = domain[i + 1], interval = b - a;
+            if (dart < measure + interval) {
+              spline.push(dart += a - measure);
+              break;
+            }
+            measure += interval;
+          }
+          c = dart - radius, d = dart + radius;
+
+          // Update the domain
+          for (i = domain.length - 1; i > 0; i -= 2) {
+            l = i - 1, a = domain[l], b = domain[i];
+            // c---d          c---d  Do nothing
+            //   c-----d  c-----d    Move interior
+            //   c--------------d    Delete interval
+            //         c--d          Split interval
+            //       a------b
+            if (a >= c && a < d)
+              if (b > d) domain[l] = d; // Move interior (Left case)
+              else domain.splice(l, 2); // Delete interval
+            else if (a < c && b > c)
+              if (b <= d) domain[i] = c; // Move interior (Right case)
+              else domain.splice(i, 0, c, d); // Split interval
+          }
+
+          // Re-measure the domain
+          for (i = 0, l = domain.length, measure = 0; i < l; i += 2)
+            measure += domain[i + 1] - domain[i];
+        }
+
+        return spline.sort();
+      }
+
+      // Create the overarching container
+      var container = document.createElement('div');
+      container.style.position = 'fixed';
+      container.style.top = '0';
+      container.style.left = '0';
+      container.style.width = '100%';
+      container.style.height = '0';
+      container.style.overflow = 'visible';
+      container.style.zIndex = '9999';
+
+      // Confetto constructor
+      function Confetto(theme) {
+        this.frame = 0;
+        this.outer = document.createElement('div');
+        this.inner = document.createElement('div');
+        this.outer.appendChild(this.inner);
+
+        var outerStyle = this.outer.style,
+          innerStyle = this.inner.style;
+        outerStyle.position = 'absolute';
+        outerStyle.width = (sizeMin + sizeMax * random()) + 'px';
+        outerStyle.height = (sizeMin + sizeMax * random()) + 'px';
+        innerStyle.width = '100%';
+        innerStyle.height = '100%';
+        innerStyle.backgroundColor = theme();
+
+        outerStyle.perspective = '50px';
+        outerStyle.transform = 'rotate(' + (360 * random()) + 'deg)';
+        this.axis = 'rotate3D(' +
+          cos(360 * random()) + ',' +
+          cos(360 * random()) + ',0,';
+        this.theta = 360 * random();
+        this.dTheta = dThetaMin + dThetaMax * random();
+        innerStyle.transform = this.axis + this.theta + 'deg)';
+
+        this.x = window.innerWidth * random();
+        this.y = -deviation;
+        this.dx = sin(dxThetaMin + dxThetaMax * random());
+        this.dy = dyMin + dyMax * random();
+        outerStyle.left = this.x + 'px';
+        outerStyle.top = this.y + 'px';
+
+        // Create the periodic spline
+        this.splineX = createPoisson();
+        this.splineY = [];
+        for (var i = 1, l = this.splineX.length - 1; i < l; ++i)
+          this.splineY[i] = deviation * random();
+        this.splineY[0] = this.splineY[l] = deviation * random();
+
+        this.update = function(height, delta) {
+          this.frame += delta;
+          this.x += this.dx * delta;
+          this.y += this.dy * delta;
+          this.theta += this.dTheta * delta;
+
+          // Compute spline and convert to polar
+          var phi = this.frame % 7777 / 7777,
+            i = 0,
+            j = 1;
+          while (phi >= this.splineX[j]) i = j++;
+          var rho = interpolation(
+            this.splineY[i],
+            this.splineY[j],
+            (phi - this.splineX[i]) / (this.splineX[j] - this.splineX[i])
+          );
+          phi *= PI2;
+
+          outerStyle.left = this.x + rho * cos(phi) + 'px';
+          outerStyle.top = this.y + rho * sin(phi) + 'px';
+          innerStyle.transform = this.axis + this.theta + 'deg)';
+          return this.y > height + deviation;
+        };
+      }
+
+
+      function poof() {
+        if (!frame) {
+          // Append the container
+          document.body.appendChild(container);
+
+          // Add confetti
+          var theme = colorThemes[0],
+            count = 0;
+          (function addConfetto() {
+            var confetto = new Confetto(theme);
+            confetti.push(confetto);
+            container.appendChild(confetto.outer);
+            timer = setTimeout(addConfetto, spread * random());
+          })(0);
+
+          // Start the loop
+          var prev = undefined;
+          requestAnimationFrame(function loop(timestamp) {
+            var delta = prev ? timestamp - prev : 0;
+            prev = timestamp;
+            var height = window.innerHeight;
+
+            for (var i = confetti.length - 1; i >= 0; --i) {
+              if (confetti[i].update(height, delta)) {
+                container.removeChild(confetti[i].outer);
+                confetti.splice(i, 1);
+              }
+            }
+
+            if (timer || confetti.length)
+              return frame = requestAnimationFrame(loop);
+
+            // Cleanup
+            document.body.removeChild(container);
+            frame = undefined;
+          });
+        }
+      }
+      //// Confetti done poof();
+
+      (function() {
+        const second = 1000,
+          minute = second * 60,
+          hour = minute * 60,
+          day = hour * 24;
+
+        //I'm adding this section so I don't have to keep updating this pen every year :-)
+        //remove this if you don't need it
+        let today = new Date(),
+          dd = String(today.getDate()).padStart(2, "0"),
+          mm = String(today.getMonth() + 1).padStart(2, "0"),
+          yyyy = today.getFullYear(),
+          nextYear = yyyy + 1,
+          monthDay = "06/12/",
+          targetday = monthDay + yyyy;
+
+        today = mm + "/" + dd + "/" + yyyy;
+
+
+        // const countDown = new Date(targetday).getTime(),
+
+        // const countDown = 1647785133000,
+        const countDown = 1655024400000,
+          x = setInterval(function() {
+
+            const now = new Date().getTime(),
+              distance = countDown - now;
+
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
+              //  Math.floor(distance / (day)),
+              document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+              document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+              document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+            //do something later when date is reached
+            if (distance < 0) {
+              document.getElementById("countdown").style.display = "none";
+              document.getElementById("content").style.display = "block";
+              clearInterval(x);
+            }
+            //seconds
+            if (today == '06/11/2022') {
+              document.getElementById("headline").innerText = "Wedding Day!";
+              poof();
+            }
+          }, 0)
+      }());
+
+    };
+  </script>
+
+
+</body>
+
+</html>
