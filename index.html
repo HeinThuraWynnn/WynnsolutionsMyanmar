@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title inertia>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Favicons -->
+    <title inertia>Wynn Solutions Myanmar</title>
+
+    <!-- Favicons -->
     <link href="iPortfolio/assets/img/favicon.ico" rel="icon">
     <link href="iPortfolio/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,18 +24,27 @@
         .bg-white {
             background-color: #fff;
         }
+
         body {
             background-color: #ece5dd;
         }
-        .img-fluid:hover{
+
+        .img-fluid:hover {
             transform: scale(1.15);
         }
-        .img-fluid { transition: all 1s ease-in-out; border-radius: 10px; }
 
-        .img-fluid.team:hover{
+        .img-fluid {
+            transition: all 1s ease-in-out;
+            border-radius: 10px;
+        }
+
+        .img-fluid.team:hover {
             transform: scale(1.5);
         }
-        .img-fluid.team { transition: all .5s ease-in-out; }
+
+        .img-fluid.team {
+            transition: all .5s ease-in-out;
+        }
 
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -108,12 +118,16 @@
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             backdrop-filter: saturate(180%) blur(20px);
         }
+
         .site-footer .link-secondary {
-            color: rgba(251, 229, 201, .8) !important; 
+            color: rgba(251, 229, 201, .8) !important;
         }
-        .site-footer a.link-secondary:hover, .site-header a:hover {
-            color: color(srgb 0.0095 0.7246 0.9509) !important; 
+
+        .site-footer a.link-secondary:hover,
+        .site-header a:hover {
+            color: color(srgb 0.0095 0.7246 0.9509) !important;
         }
+
         .site-header a {
             color: rgba(251, 229, 201, .8);
             transition: color .15s ease-in-out;
@@ -121,8 +135,8 @@
 
 
         /*
- * Dummy devices (replace them with your own or something else entirely!)
- */
+        * Dummy devices (replace them with your own or something else entirely!)
+        */
 
         .product-device {
             position: absolute;
@@ -183,8 +197,6 @@
                 flex: 1;
             }
         }
-
-        
     </style>
 
 
@@ -224,7 +236,8 @@
             <p class="lead fw-normal">We will provide the excellent services and passionate developer, developing with
                 full of innovations. We are building applications that illuminate people lives. Specialties: Android,
                 Web, Java, PHP, CMS.</p>
-            <a class="btn btn-outline-secondary" href="tel:+959 971 879 637" title="call now">Create the neXt <i class="fa fa-phone" title="call now"></i> ...</a>
+            <a class="btn btn-outline-secondary" href="tel:+959 971 879 637" title="call now">Create the neXt <i
+                    class="fa fa-phone" title="call now"></i> ...</a>
         </div>
         <div class="product-device shadow-sm d-none d-md-block">
             <img src="iPortfolio/assets/img/services/web-reno-service.jpg" class="img-fluid app " alt="" style="position: absolute; 
@@ -257,7 +270,7 @@
             bottom: 10%;
             left: 10px;
             border-radius: 5px;">
-            
+
 
         </div>
     </div>
@@ -266,11 +279,13 @@
         <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
             <div class="my-3 py-3">
                 <h2 class="display-5">E-commerce Websites and Portal Services</h2>
-                <p class="lead">Living in the tech era, any local business should move to the online. <br/>Don't worries, we
+                <p class="lead">Living in the tech era, any local business should move to the online. <br />Don't
+                    worries, we
                     provide various kinds of product selling marketplace.</p>
             </div>
             <div class="bg-white shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <img src="iPortfolio/assets/img/services/ecommerce-service.jpg" class="img-fluid ecommerce " alt="" style="width:80%;  height: 290px; margin-top:10px;">
+                <img src="iPortfolio/assets/img/services/ecommerce-service.jpg" class="img-fluid ecommerce " alt=""
+                    style="width:80%;  height: 290px; margin-top:10px;">
             </div>
         </div>
         <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
@@ -281,7 +296,8 @@
                 </p>
             </div>
             <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <img src="iPortfolio/assets/img/services/email-service.png" class="img-fluid email " alt="" style="width:80%;  height: 290px; margin-top:10px;">
+                <img src="iPortfolio/assets/img/services/email-service.png" class="img-fluid email " alt=""
+                    style="width:80%;  height: 290px; margin-top:10px;">
             </div>
         </div>
     </div>
@@ -294,7 +310,8 @@
                     data. Data show your business's statics. Work with us!</p>
             </div>
             <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-                <img src="iPortfolio/assets/img/services/app-service.png" class="img-fluid app " alt="" style="width:80%;  height: 290px; margin-top:10px;">
+                <img src="iPortfolio/assets/img/services/app-service.png" class="img-fluid app " alt=""
+                    style="width:80%;  height: 290px; margin-top:10px;">
             </div>
         </div>
         <div class="text-bg-secondary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
@@ -304,8 +321,9 @@
                     image. Let's we help to you, with our design specialist talents and latest designs</p>
             </div>
             <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-              
-                <img src="iPortfolio/assets/img/services/web-reno-service.jpg" class="img-fluid renovation " alt="" style="width:80%;  height: 290px; margin-top:10px;">
+
+                <img src="iPortfolio/assets/img/services/web-reno-service.jpg" class="img-fluid renovation " alt=""
+                    style="width:80%;  height: 290px; margin-top:10px;">
 
             </div>
         </div>
@@ -320,13 +338,16 @@
             <div class="row no-gutters">
 
                 <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-                    <div class="d-inline shadow-sm" style="padding-top: 25px!important; padding-left: 25px!important; padding-right: 25px!important; padding-bottom: 25px!important; border-radius: 50%; background-color: #edf7fd;">
-                        <img src="iPortfolio/assets/img/avatars/team2.png" class="img-fluid" alt="" width="100" height="100">
+                    <div class="d-inline shadow-sm"
+                        style="padding-top: 25px!important; padding-left: 25px!important; padding-right: 25px!important; padding-bottom: 25px!important; border-radius: 50%; background-color: #edf7fd;">
+                        <img src="iPortfolio/assets/img/avatars/team2.png" class="img-fluid" alt="" width="100"
+                            height="100">
                     </div>
                 </div>
                 <div class="col-lg-9 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
                     <div class="">
-                        <p class="justify-content-between">We have four members, one Senior web developer as PM and dev lead, one Frontend Expertise,
+                        <p class="justify-content-between">We have four members, one Senior web developer as PM and dev
+                            lead, one Frontend Expertise,
                             one Senior QA and one Designer. Senior Developer have over six-year project with various
                             kind of project experiences. Such as enterprise project, one stop online shopping system,
                             social
@@ -340,16 +361,20 @@
             <div class="row no-gutters mt-5">
                 <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-3">
-                        <div class="mb-3" style="padding-top: 15px!important; padding-left: 15px!important; padding-right: 15px!important; padding-bottom: 15px!important; border-radius: 50%; background-color: transparent;">
-                            <img src="iPortfolio/assets/img/avatars/dev1.png" class="img-fluid shadow-sm team" alt="" width="70" height="70">
+                        <div class="mb-3"
+                            style="padding-top: 15px!important; padding-left: 15px!important; padding-right: 15px!important; padding-bottom: 15px!important; border-radius: 50%; background-color: transparent;">
+                            <img src="iPortfolio/assets/img/avatars/dev1.png" class="img-fluid shadow-sm team" alt=""
+                                width="70" height="70">
                         </div>
-                        <p>Senior<strong>  Web Developer</strong></p>
+                        <p>Senior<strong> Web Developer</strong></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
                     <div class="mb-3">
-                        <div class="mb-3" style="padding-top: 15px!important; padding-left: 15px!important; padding-right: 15px!important; padding-bottom: 15px!important; border-radius: 50%; background-color: transparent;">
-                            <img src="iPortfolio/assets/img/avatars/dev2.png" class="img-fluid shadow-sm team" alt="" width="70" height="70">
+                        <div class="mb-3"
+                            style="padding-top: 15px!important; padding-left: 15px!important; padding-right: 15px!important; padding-bottom: 15px!important; border-radius: 50%; background-color: transparent;">
+                            <img src="iPortfolio/assets/img/avatars/dev2.png" class="img-fluid shadow-sm team" alt=""
+                                width="70" height="70">
                         </div>
                         <p><strong>Frontend</strong> Expertise</p>
                     </div>
@@ -357,8 +382,10 @@
 
                 <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
                     <div class="mb-3">
-                        <div class="mb-3" style="padding-top: 15px!important; padding-left: 15px!important; padding-right: 15px!important; padding-bottom: 15px!important; border-radius: 50%; background-color: transparent;">
-                            <img src="iPortfolio/assets/img/avatars/designer-girl.png" class="img-fluid shadow-sm team" alt="" width="70" height="70">
+                        <div class="mb-3"
+                            style="padding-top: 15px!important; padding-left: 15px!important; padding-right: 15px!important; padding-bottom: 15px!important; border-radius: 50%; background-color: transparent;">
+                            <img src="iPortfolio/assets/img/avatars/designer-girl.png" class="img-fluid shadow-sm team"
+                                alt="" width="70" height="70">
                         </div>
                         <p><strong>UI/UX</strong> Designer</p>
                     </div>
@@ -366,8 +393,10 @@
 
                 <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
                     <div class="mb-3">
-                        <div class="mb-3" style="padding-top: 15px!important; padding-left: 15px!important; padding-right: 15px!important; padding-bottom: 15px!important; border-radius: 50%; background-color: transparent;">
-                            <img src="iPortfolio/assets/img/avatars/qa-girl.png" class="img-fluid shadow-md team" alt="" width="70" height="70">
+                        <div class="mb-3"
+                            style="padding-top: 15px!important; padding-left: 15px!important; padding-right: 15px!important; padding-bottom: 15px!important; border-radius: 50%; background-color: transparent;">
+                            <img src="iPortfolio/assets/img/avatars/qa-girl.png" class="img-fluid shadow-md team" alt=""
+                                width="70" height="70">
                         </div>
                         <p>Senior <strong>QA</strong></p>
                     </div>
@@ -400,7 +429,6 @@
                                             .st0 {
                                                 fill: #FFFFFF;
                                             }
-
                                             .st1 {
                                                 fill: #6FDA44;
                                             }
