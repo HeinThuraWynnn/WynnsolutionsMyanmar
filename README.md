@@ -1,49 +1,112 @@
-# Getting Started with Create React App
+# Wynn AI Solutions Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website showcasing AI development and software engineering expertise. Built with React, Tailwind CSS, and deployed on GitHub Pages.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+- **Modern Design**: Clean, professional UI with smooth animations
+- **Interactive Elements**: Floating particles and glow effects
+- **Responsive Layout**: Optimized for all device sizes
+- **SEO Optimized**: Meta tags and structured data
+- **Performance**: Lazy loading and optimized assets
+- **Custom Domain**: Deployed at [wynnsolutionsmyanmar.com](https://wynnsolutionsmyanmar.com)
 
-### `npm start`
+## 🚀 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React 18, Tailwind CSS
+- **Icons**: Lucide React
+- **SEO**: React Helmet Async
+- **Deployment**: GitHub Pages
+- **Build Tool**: Create React App
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📁 Project Structure
 
-### `npm test`
+```
+src/
+├── components/
+│   ├── FloatingParticles.js    # Animated background particles
+│   └── GlowEffect.js           # Interactive glow effects
+├── App.js                      # Main portfolio component
+├── index.js                    # React app entry point
+└── index.css                   # Global styles and Tailwind imports
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Development
 
-### `npm run build`
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone the repository
+git clone https://github.com/HeinThuraWynnn/HeinThuraWynnn.github.io.git
+cd HeinThuraWynnn.github.io
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Install dependencies
+npm install
 
-### `npm run eject`
+# Start development server
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Available Scripts
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- `npm start` - Runs the development server
+- `npm run build` - Creates production build
+- `npm run deploy` - Deploys to GitHub Pages
+- `npm test` - Runs tests
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Deployment
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The site is automatically deployed to GitHub Pages using the `gh-pages` branch:
 
-## Learn More
+```bash
+# Build and deploy
+npm run deploy
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Branch Structure
+- `main` - Source code and development
+- `gh-pages` - Built files for GitHub Pages deployment
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Custom Domain Setup
+
+The site uses a custom domain configuration:
+- Primary: `wynnsolutionsmyanmar.com`
+- WWW: `www.wynnsolutionsmyanmar.com`
+
+DNS configuration:
+- A records pointing to GitHub Pages IPs
+- CNAME record for www subdomain
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive with breakpoints:
+- Mobile: 320px - 768px
+- Tablet: 768px - 1024px
+- Desktop: 1024px+
+
+## ⚡ Performance Optimizations
+
+- Lazy loading for heavy components
+- Optimized images and assets
+- Minimal bundle size
+- Efficient re-renders with React hooks
+
+## 🎨 Customization
+
+To customize the portfolio:
+
+1. **Content**: Edit sections in `src/App.js`
+2. **Styling**: Modify Tailwind classes or `src/index.css`
+3. **Components**: Update `src/components/` files
+4. **Configuration**: Adjust `tailwind.config.js`
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ### Code Splitting
 
