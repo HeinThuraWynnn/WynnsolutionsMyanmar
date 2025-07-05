@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import {  useEffect } from 'react';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
@@ -10,9 +10,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Navigation from './components/Navigation';
 import AboutThomazPage from './components/AboutThomazPage';
+import './App.css';
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     // Always set dark mode
@@ -425,11 +426,7 @@ function App() {
       `}</style>
       
       {/* Navigation */}
-      <Navigation 
-        isMenuOpen={isMenuOpen}
-        setIsMenuOpen={setIsMenuOpen}
-      />
-
+      <Navigation />
       {/* Routes */}
       <Routes>
         <Route path="/" element={<HomePage />} />
