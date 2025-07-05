@@ -1,133 +1,69 @@
-# Wynn AI Solutions Portfolio
+# React + TypeScript + Vite
 
-A modern, responsive portfolio website showcasing AI development and software engineering expertise. Built with React, Tailwind CSS, and deployed on GitHub Pages.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🌟 Features
+Currently, two official plugins are available:
 
-- **Modern Design**: Clean, professional UI with smooth animations
-- **Interactive Elements**: Floating particles and glow effects
-- **Responsive Layout**: Optimized for all device sizes
-- **SEO Optimized**: Meta tags and structured data
-- **Performance**: Lazy loading and optimized assets
-- **Custom Domain**: Deployed at [wynnsolutionsmyanmar.com](https://wynnsolutionsmyanmar.com)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🚀 Tech Stack
+## Expanding the ESLint configuration
 
-- **Frontend**: React 18, Tailwind CSS
-- **Icons**: Lucide React
-- **SEO**: React Helmet Async
-- **Deployment**: GitHub Pages
-- **Build Tool**: Create React App
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## 📁 Project Structure
+```js
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-```
-src/
-├── components/
-│   ├── FloatingParticles.js    # Animated background particles
-│   └── GlowEffect.js           # Interactive glow effects
-├── App.js                      # Main portfolio component
-├── index.js                    # React app entry point
-└── index.css                   # Global styles and Tailwind imports
-```
+      // Remove tseslint.configs.recommended and replace with this
+      ...tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      ...tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      ...tseslint.configs.stylisticTypeChecked,
 
-## 🛠️ Development
-
-### Prerequisites
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/HeinThuraWynnn/HeinThuraWynnn.github.io.git
-cd HeinThuraWynnn.github.io
-
-# Install dependencies
-npm install
-
-# Start development server
-npm start
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-### Available Scripts
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-- `npm start` - Runs the development server
-- `npm run build` - Creates production build
-- `npm run deploy` - Deploys to GitHub Pages
-- `npm test` - Runs tests
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-## 🚀 Deployment
-
-The site is automatically deployed to GitHub Pages using the `gh-pages` branch:
-
-```bash
-# Build and deploy
-npm run deploy
+export default tseslint.config([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-### Branch Structure
-- `main` - Source code and development
-- `gh-pages` - Built files for GitHub Pages deployment
-
-### Custom Domain Setup
-
-The site uses a custom domain configuration:
-- Primary: `wynnsolutionsmyanmar.com`
-- WWW: `www.wynnsolutionsmyanmar.com`
-
-DNS configuration:
-- A records pointing to GitHub Pages IPs
-- CNAME record for www subdomain
-
-## 📱 Responsive Design
-
-The portfolio is fully responsive with breakpoints:
-- Mobile: 320px - 768px
-- Tablet: 768px - 1024px
-- Desktop: 1024px+
-
-## ⚡ Performance Optimizations
-
-- Lazy loading for heavy components
-- Optimized images and assets
-- Minimal bundle size
-- Efficient re-renders with React hooks
-
-## 🎨 Customization
-
-To customize the portfolio:
-
-1. **Content**: Edit sections in `src/App.js`
-2. **Styling**: Modify Tailwind classes or `src/index.css`
-3. **Components**: Update `src/components/` files
-4. **Configuration**: Adjust `tailwind.config.js`
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
